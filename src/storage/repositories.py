@@ -95,6 +95,14 @@ class SqlBookRepository:
                 updated_at=row[9],
             )
 
+    def get_book(self, book_id: int) -> Book | None:
+        """Alias for get_by_id."""
+        return self.get_by_id(book_id)
+
+    def get_book_sentences(self, book_id: int) -> list[BookSentence]:
+        """Fetch all sentences for a book."""
+        return self.get_sentences(book_id, start_idx=0, limit=100000)
+
     def get_by_hash(self, content_hash: str) -> Book | None:
         """Fetch book by SHA-256 content hash."""
         with self.engine.connect() as conn:

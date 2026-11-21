@@ -34,6 +34,13 @@ data/cache/
 .env.*.local
 !.env.example
 
+# Frontend & Node.js
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.vite/
+*.tsbuildinfo
+
 # IDE & OS files
 .vscode/
 .idea/

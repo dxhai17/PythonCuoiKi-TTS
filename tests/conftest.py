@@ -11,8 +11,8 @@ import pytest
 from sqlalchemy import Engine, create_engine
 from sqlalchemy.pool import StaticPool
 
-from src.storage.migrations import run_migrations
-from src.tts.base import AudioSynthesisResult, TTSProvider
+from src.core.storage.migrations import run_migrations
+from src.core.tts.base import AudioSynthesisResult, TTSProvider
 
 
 def generate_dummy_wav(duration_seconds: float = 0.5, sample_rate: int = 16000) -> bytes:
