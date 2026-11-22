@@ -20,6 +20,9 @@ dependencies = [
     "readchar>=4.0.5",
     "pydantic>=2.5.0",
     "python-dotenv>=1.0.0",
+    "flask>=3.0.0",
+    "flask-cors>=4.0.0",
+    "matplotlib>=3.8.0",
 ]
 
 [project.optional-dependencies]
