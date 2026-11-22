@@ -26,7 +26,7 @@ export const LibraryPage: React.FC<LibraryPageProps> = ({ onSelectBook }) => {
           <Search size={18} className="search-icon" />
           <input
             type="text"
-            placeholder="Search audiobooks..."
+            placeholder="Search audiobooks"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

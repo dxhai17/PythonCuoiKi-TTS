@@ -19,7 +19,6 @@ export function App() {
       <Navbar
         currentTab={currentTab}
         onSelectTab={setCurrentTab}
-        activeBookTitle={selectedBook?.title}
       />
 
       <main className="main-container">

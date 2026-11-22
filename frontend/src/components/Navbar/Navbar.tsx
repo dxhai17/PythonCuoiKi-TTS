@@ -4,10 +4,9 @@ import { BookOpen, Headphones, BarChart2 } from 'lucide-react';
 interface NavbarProps {
   currentTab: 'library' | 'player' | 'dashboard';
   onSelectTab: (tab: 'library' | 'player' | 'dashboard') => void;
-  activeBookTitle?: string | null;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ currentTab, onSelectTab, activeBookTitle }) => {
+export const Navbar: React.FC<NavbarProps> = ({ currentTab, onSelectTab }) => {
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -31,7 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onSelectTab, activeB
             onClick={() => onSelectTab('player')}
           >
             <Headphones size={18} />
-            <span>Player {activeBookTitle ? `(${activeBookTitle.slice(0, 15)}...)` : ''}</span>
+            <span>Player</span>
           </button>
 
           <button
